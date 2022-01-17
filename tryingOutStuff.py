@@ -22,5 +22,12 @@ browser.switch_to.frame(iframe_one)
 welcome_text = browser.find_element(By.CSS_SELECTOR, "div#block-ec928cee802cf918d26c")
 print(welcome_text.text)
 
-# # quit the browser
+# go back to main frame
+browser.switch_to.default_content()
+
+# get elements
+other_text = browser.find_element(By.CSS_SELECTOR, "div#block-5d3de848045889000188d389 div p")
+print(other_text.text)
+
+# quit the browser
 browser.quit()
